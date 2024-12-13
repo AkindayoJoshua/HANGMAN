@@ -1,0 +1,98 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 20px;
+            gap: 20px;
+        }
+
+        #word-and-letters {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        #hangman-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 300px;
+        }
+
+        .word {
+            display: inline-block;
+            font-size: 2rem;
+            margin: 0 5px;
+            border-bottom: 2px solid #333;
+            width: 30px;
+            text-align: center;
+        }
+
+        #hint {
+            margin: 20px;
+            font-size: 1.2rem;
+        }
+
+        #lives {
+            margin: 20px;
+            font-size: 1.2rem;
+            color: red;
+        }
+
+        #letters-container {
+            margin-top: 20px;
+        }
+
+        .letter {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 1.2rem;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .letter:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #hangman-drawing {
+            margin: 20px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            #game-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #word-and-letters, #hangman-container {
+                width: 100%;
+            }
+
+            .letter {
+                padding: 8px 10px;
+                font-size: 1rem;
+            }
+
+            .word {
+                font-size: 1.5rem;
+            }
+        }
+ 
